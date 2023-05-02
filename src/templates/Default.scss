@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "CedarvilleCursive";
+  src: local("CedarvilleCursive"),
+    url("./CedarvilleCursive-Regular.ttf") format("truetype");
+  font-weight: bold;
+}
+.cursive {
+  font-family: "CedarvilleCursive" !important;
+}
+.default-template {
+  min-height: 100vh;
+  max-width: 100vw;
+  width: 100%;
+  background-color: rgba(0,0,0,0.9);
+  .default-template__background {
+    background-image: url("./treble-clef-stave.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    min-height: 100vh;
+    max-width: 100vw;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+  .default-template__header {
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 0.9;
+    .header__menu-icon {
+      color: #fff;
+    }
+  }
+  .default-template__title {
+    margin-bottom: 0px;
+    line-height: 40px;
+    vertical-align: middle;
+    height: 40px;
+    font-size: 30px;
+  }
+  .default-template__subtitle {
+    margin-top: 0;
+    height: 14px;
+    font-size: 14px;
+    line-height: 14px;
+    position: relative;
+    top: -5px;
+    padding-left: 15px;
+  }
+  .default-template__content {
+    padding-top: 80px;
+    min-height: calc(100vh - 80px);
+    flex: 1;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
