@@ -1,5 +1,5 @@
 import { Box } from "@mui/system";
-import { Album } from "../../common";
+import { Album, IAlbumTrack } from "../../common";
 import "./Home.scss";
 import { WordOfTheDay } from "./WordOfTheDay";
 import { albums } from '../../data';
@@ -7,26 +7,29 @@ import { useState } from "react";
 import ReactAudioPlayer from 'react-audio-player';
 
 export function Home() {
-  const [currentSrc, setCurrentSrc] = useState('');
+  const [currentTrack, setCurrentTrack] = useState<IAlbumTrack | null>(null);
   return (
     <Box className="page-home">
-      <Box className="home__cards -flex -space-between">
+      <Box className="home__hero -flex -space-between">
+        {/*<img alt="Jam Session" src="/img/cartoon-jam.jpeg" />*/}
         <WordOfTheDay />
       </Box>
-      <Box className="-flex -space-between">
-        <Album album={albums[0]} onTrackClick={onTrackClick} />
+      <Box className="home__albums -flex -space-between">
+        {albums.map((album, index) => (
+          <Album key={`album-${album.title}`} album={album} onTrackClick={onTrackClick} />
+        ))}
       </Box>
-      {currentSrc && (
+      <Box className="home__player -flex -space-between">
         <ReactAudioPlayer
-          src={currentSrc}
+          src={currentTrack?.src}
+          title={currentTrack?.title}
           autoPlay
           controls
         />
-      )}
+      </Box>
     </Box>
   );
-  function onTrackClick(src: string) {
-    console.log(src);
-    setCurrentSrc(src);
+  function onTrackClick(track: IAlbumTrack) {
+    setCurrentTrack(track);
   }
 }

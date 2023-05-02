@@ -11,7 +11,6 @@ const bull = (
 export function WordOfTheDay() {
   return (
     <Card className="home-word-of-the-day">
-      <CardMedia component="img" height="300" src="/img/cartoon-jam.jpeg" />
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           Word of the Day

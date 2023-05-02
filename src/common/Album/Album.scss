@@ -1,6 +1,7 @@
 .album {
   flex: 1;
+  min-width: 500px;
   max-width: 500px;
-  margin: 0 15px;
-  opacity: 0.9;
+  margin: 0 auto 15px auto;
+  opacity: 0.85;
 }
