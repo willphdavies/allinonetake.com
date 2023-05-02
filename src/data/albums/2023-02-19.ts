@@ -3,7 +3,7 @@ import { IAlbum } from "../../common/Album";
 const album: IAlbum = {
   title: 'You should be at Church',
   date: new Date(2023, 1, 19),
-  img: '/img/men-bar.jpeg',
+  img: '/img/girls.jpeg',
   tracks: [
     {
       title: 'Bats in the Belfry',

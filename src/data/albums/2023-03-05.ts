@@ -30,10 +30,6 @@ const album: IAlbum = {
       src: '/songs/2023-03-05/intrigue.mp3',
     },
     {
-      title: 'Intrigue',
-      src: '/songs/2023-03-05/intrigue.mp3',
-    },
-    {
       title: 'Joy Ride',
       src: '/songs/2023-03-05/joy_ride.mp3',
     },
