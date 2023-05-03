@@ -16,7 +16,9 @@ export function Home() {
       </Box>
       <Box className="home__albums -flex -space-between">
         {albums.map((album, index) => (
-          <Album key={`album-${album.title}`} album={album} onTrackClick={onTrackClick} />
+          <Box className="album__container" key={`album-${album.title}`}>
+            <Album key={`album-${album.title}`} album={album} onTrackClick={onTrackClick} />
+          </Box>
         ))}
       </Box>
       <Box className="home__player -flex -space-between">

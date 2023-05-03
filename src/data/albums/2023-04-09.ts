@@ -10,8 +10,8 @@ const album: IAlbum = {
       src: '/songs/2023-04-09/aching_heart.mp3',
     },
     {
-      title: 'Chemistry Class',
-      src: '/songs/2023-04-09/antony_took_your_beer.mp3',
+      title: 'Anthony took your Beer',
+      src: '/songs/2023-04-09/anthony_took_your_beer.mp3',
     },
     {
       title: 'False Spring',
