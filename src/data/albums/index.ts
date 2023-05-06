@@ -6,9 +6,11 @@ import a4 from './2023-03-05';
 import a5 from './2023-03-12';
 import a6 from './2023-03-19';
 import a7 from './2023-03-26';
-import a8 from './2023-04-09';
-import a9 from './2023-04-30';
+import a8 from './2023-04-02';
+import a9 from './2023-04-09';
+import a10 from './2023-04-30';
 export const albums: IAlbum[] = [
+  a10,
   a9,
   a8,
   a7,

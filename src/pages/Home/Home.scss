@@ -11,6 +11,12 @@
       height: 300px;
       margin-right: 30px;
     }
+    @media only screen and (min-width: 1375px) and (max-width: 1530px) {
+      position: fixed;
+      width: calc(100% - 50px);
+      margin: auto;
+      padding-top: 0;
+    }
   }
   .page-home__card {
     width: 100%;

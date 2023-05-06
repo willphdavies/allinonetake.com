@@ -6,28 +6,28 @@ const album: IAlbum = {
   img: '/img/girls.jpeg',
   tracks: [
     {
-      title: 'Bats in the Belfry',
-      src: '/songs/2023-02-19/bats_in_the_belfry.mp3',
-    },
-    {
       title: 'Good Day',
       src: '/songs/2023-02-19/good_day.mp3',
     },
     {
-      title: 'Need',
-      src: '/songs/2023-02-19/needs.mp3',
-    },
-    {
-      title: 'No Covers',
-      src: '/songs/2023-02-19/no_covers.mp3'
+      title: 'Sky\'s the Limit',
+      src: '/songs/2023-02-19/skys_the_limit.mp3'
     },
     {
       title: 'Realization',
       src: '/songs/2023-02-19/realization.mp3'
     },
     {
-      title: 'Sky\'s the Limit',
-      src: '/songs/2023-02-19/skys_the_limit.mp3'
+      title: 'No Covers',
+      src: '/songs/2023-02-19/no_covers.mp3'
+    },
+    {
+      title: 'Bats in the Belfry',
+      src: '/songs/2023-02-19/bats_in_the_belfry.mp3',
+    },
+    {
+      title: 'Need',
+      src: '/songs/2023-02-19/needs.mp3',
     },
   ]
 }

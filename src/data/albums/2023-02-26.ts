@@ -6,12 +6,12 @@ const album: IAlbum = {
   img: '/img/guitarist.jpeg',
   tracks: [
     {
-      title: 'Forward',
-      src: '/songs/2023-02-26/forward.mp3',
-    },
-    {
       title: 'Hopscotch',
       src: '/songs/2023-02-26/hopscotch.mp3',
+    },
+    {
+      title: 'Forward',
+      src: '/songs/2023-02-26/forward.mp3',
     },
     {
       title: 'Startup',
