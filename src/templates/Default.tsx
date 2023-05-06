@@ -19,9 +19,12 @@ export function DefaultTemplate(props: DefaultTemplateProps) {
         color="transparent"
         elevation={0}>
         <Toolbar>
+          <Box className="default-template__logo">
+            <img src="/logo.jpg" alt="All In One Take" />
+          </Box>
           <Box>
-          <Typography className="default-template__title cursive -white" variant="h4">All In One Take</Typography>
-          <Typography className="default-template__subtitle -white">spontaneous, live, fun</Typography>
+            <Typography className="default-template__title cursive -white" variant="h4">All In One Take</Typography>
+            <Typography className="default-template__subtitle -white">spontaneous, live, fun</Typography>
           </Box>
           <Box className="-spacer"></Box>
           <IconButton>
