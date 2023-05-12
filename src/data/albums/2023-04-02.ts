@@ -23,7 +23,7 @@ const album: IAlbum = {
     },
     {
       title: 'Tabula Rasa',
-      src: '/songs/2023-04-02/tabla_rasa.mp3',
+      src: '/songs/2023-04-02/tabula_rasa.mp3',
     },
     {
       title: 'Tune in at Eleven',
