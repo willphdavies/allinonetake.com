@@ -24,7 +24,7 @@ export function DefaultTemplate(props: DefaultTemplateProps) {
           </Box>
           <Box>
             <Typography className="default-template__title cursive -white" variant="h4">All In One Take</Typography>
-            <Typography className="default-template__subtitle -white">spontaneous, live, fun</Typography>
+            <Typography className="default-template__subtitle -white">leave your comfort zone at the door</Typography>
           </Box>
           <Box className="-spacer"></Box>
           <IconButton>

@@ -5,6 +5,7 @@ import { WordOfTheDay } from "./WordOfTheDay";
 import { albums } from '../../data';
 import { useState } from "react";
 import ReactAudioPlayer from 'react-audio-player';
+import { Typography } from "@mui/material";
 
 export function Home() {
   const [currentTrack, setCurrentTrack] = useState<IAlbumTrack | null>(null);
