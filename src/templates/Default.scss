@@ -31,9 +31,13 @@
       color: #fff;
     }
   }
-  .default-template__logo {
-    img {
-      height: 45px;
+  .home-link {
+    display: flex;
+    text-decoration: none;
+    .default-template__logo {
+      img {
+        height: 45px;
+      }
     }
   }
   .default-template__title {
@@ -58,5 +62,14 @@
     position: relative;
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+.side-menu {
+  .side-menu__list {
+    a {
+      display: flex;
+      flex: 1;
+      text-decoration: none;
+    }
   }
 }

@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.scss';
-import { Home } from './pages';
-import { DefaultTemplate } from './templates';
+import { AppRoutes } from './App.routes';
 
 function App() {
   return (
-    <DefaultTemplate><Home /></DefaultTemplate>
+    <AppRoutes />
   );
 }
 
