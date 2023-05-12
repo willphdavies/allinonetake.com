@@ -3,7 +3,7 @@ import { IAlbum } from "../../common/Album";
 const album: IAlbum = {
   title: 'Church is in the Heart',
   date: new Date(2023, 2, 5),
-  img: '/img/men-bar.jpeg',
+  img: '/img/girls.jpeg',
   tracks: [
     {
       title: 'Warmups',
