@@ -6,7 +6,7 @@ const album: IAlbum = {
   img: '/img/nun.jpeg',
   tracks: [
     {
-      title: 'Two Guitars, Two Bass',
+      title: 'Two Guitars, Two Bass, One Cup',
       src: '/songs/2023-04-30/two_guitars.mp3',
     },
     {
@@ -22,7 +22,7 @@ const album: IAlbum = {
       src: '/songs/2023-04-30/keep_it_goin.mp3',
     },
     {
-      title: 'The House of the Harmonic Minor',
+      title: 'House of the Harmonic Minor',
       src: '/songs/2023-04-30/harmonic_minor.mp3',
     },
     {
@@ -30,7 +30,7 @@ const album: IAlbum = {
       src: '/songs/2023-04-30/sandstorm_rising.mp3',
     },
     {
-      title: 'You know what you want (And you don\'t Know what you don\'t Know',
+      title: 'You know what you know (And you don\'t know what you don\'t know',
       src: '/songs/2023-04-30/what_you_know.mp3',
     },
     {

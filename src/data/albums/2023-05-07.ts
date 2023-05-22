@@ -1,7 +1,7 @@
 import { IAlbum } from "../../common/Album";
 
 const album: IAlbum = {
-  title: 'Churches: Not just for Chickens Anymore...',
+  title: 'Churches: Not just for Chicken Anymore...',
   date: new Date(2023, 4, 7),
   img: '/img/chickens.jpeg',
   tracks: [
@@ -50,7 +50,7 @@ const album: IAlbum = {
       src: '/songs/2023-05-07/being_in_love.mp3'
     },
     {
-      title: 'Abyssmal Descent',
+      title: 'Abyssal Descent',
       src: '/songs/2023-05-07/abyssmal_descent.mp3',
     },
     {
@@ -60,6 +60,10 @@ const album: IAlbum = {
     {
       title: 'Survival of The Fittest',
       src: '/songs/2023-05-07/survival_of_the_fittest.mp3',
+    },
+    {
+      title: 'The Sexy Song',
+      src: '/songs/2023-05-07/the_sexy_song.mp3',
     },
   ]
 }
