@@ -50,7 +50,7 @@ const album: IAlbum = {
       src: '/songs/2023-04-09/irish_spell.mp3',
     },
     {
-      title: 'Sarah Palin',
+      title: 'The Unfortunate Rise of Sarah Palin',
       src: '/songs/2023-04-09/sarah_palin.mp3',
     },
     {

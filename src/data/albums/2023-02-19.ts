@@ -26,7 +26,7 @@ const album: IAlbum = {
       src: '/songs/2023-02-19/bats_in_the_belfry.mp3',
     },
     {
-      title: 'Need',
+      title: 'Needs',
       src: '/songs/2023-02-19/needs.mp3',
     },
   ]
