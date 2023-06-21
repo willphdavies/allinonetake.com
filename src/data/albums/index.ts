@@ -15,7 +15,9 @@ import a13 from './2023-05-21';
 import a14 from './2023-05-28';
 import a15 from './2023-06-04';
 import a16 from './2023-06-11';
+import a17 from './2023-06-18';
 export const albums: IAlbum[] = [
+  a17,
   a16,
   a15,
   a14,

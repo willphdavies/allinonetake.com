@@ -3,7 +3,7 @@ import { IAlbum } from "../../common/Album";
 const album: IAlbum = {
   title: 'Charming Church Chums',
   date: new Date(2023, 5, 4),
-  img: '/img/ball-pit.jpeg',
+  img: '/img/vampire.jpeg',
   tracks: [
     {
       title: 'Off to The Races',
@@ -28,6 +28,10 @@ const album: IAlbum = {
     {
       title: 'Boots Traps',
       src: '/songs/2023-06-04/boots_traps.mp3',
+    },
+    {
+      title: 'Iridescence',
+      src: '/songs/2023-06-04/iridescence.mp3',
     },
     {
       title: 'Ten Minutes to Live',

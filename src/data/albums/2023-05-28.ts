@@ -2,7 +2,7 @@ import { IAlbum } from "../../common/Album";
 
 const album: IAlbum = {
   title: 'Chippin\' Away at Church',
-  date: new Date(2023, 4, 14),
+  date: new Date(2023, 4, 28),
   img: '/img/jellyfish.jpeg',
   tracks: [
     {

@@ -2,7 +2,7 @@ import { IAlbum } from "../../common/Album";
 
 const album: IAlbum = {
   title: 'Church Sessions - Light of Church',
-  date: new Date(2023, 4, 14),
+  date: new Date(2023, 4, 21),
   img: '/img/band.jpeg',
   tracks: [
     {
