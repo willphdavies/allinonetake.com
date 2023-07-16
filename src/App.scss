@@ -1,3 +1,20 @@
+.app-conatiner {
+  .app__player {
+    position: fixed;
+    bottom: 0;
+    flex: 1;
+    justify-content: center;
+    padding-bottom: 15px;
+    width: calc(100vw - 30px);
+
+    audio {
+      margin: auto;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}
 .-spacer {
   flex: 1;
 }

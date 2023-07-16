@@ -25,17 +25,9 @@
       width: 100%;
       max-width: 500px;
       margin: 0 auto;
-    }
-  }
-  .home__player {
-    position: fixed;
-    bottom: 0;
-    flex: 1;
-    justify-content: center;
-    padding-bottom: 15px;
-    width: calc(100vw - 30px);
-    audio {
-      margin: auto;
+      a {
+        width: 100%;
+      }
     }
   }
 }

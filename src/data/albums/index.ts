@@ -1,4 +1,5 @@
-import { IAlbum } from '../Album.interface';
+import { plainToInstance } from 'class-transformer';
+import { AlbumModel, IAlbum } from '../Album.interface';
 import a1 from './2023-02-12';
 import a2 from './2023-02-19';
 import a3 from './2023-02-26';
@@ -19,7 +20,7 @@ import a17 from './2023-06-18';
 import a18 from './2023-06-25';
 import a19 from './2023-07-02';
 import a20 from './2023-07-09';
-export const albums: IAlbum[] = [
+const data: IAlbum[] = [
   a20,
   a19,
   a18,
@@ -41,3 +42,4 @@ export const albums: IAlbum[] = [
   a2,
   a1
 ];
+export const albums = data.map((a: IAlbum) => plainToInstance(AlbumModel, a));

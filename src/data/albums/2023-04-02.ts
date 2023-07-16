@@ -2,7 +2,7 @@ import { IAlbum } from "../../common/Album";
 
 const album: IAlbum = {
   title: 'Confined Spaces',
-  date: new Date(2023, 3, 9),
+  date: new Date(2023, 3, 2),
   img: '/img/bandit.jpeg',
   tracks: [
     {
