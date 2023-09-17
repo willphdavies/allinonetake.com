@@ -1,17 +1,15 @@
 import { Card, CardContent, CardHeader, CardMedia, List } from "@mui/material";
-import { IAlbum } from "../../data/Album.interface";
+import { AlbumModel } from "../../data/Album.interface";
 import { AlbumTrack } from "./Album.track";
 import "./Album.scss";
 import dayjs from "dayjs";
-import { useAppState } from "../../data";
 
 export interface AlbumProps {
-  album: IAlbum;
+  album: AlbumModel;
   imageOnly?: boolean;
 }
 export function Album(props: AlbumProps) {
   const { album, imageOnly } = props;
-  const { isPlaying, currentTrack, onTrackClick } = useAppState();
   return (
     <Card className="album">
       <CardHeader
@@ -23,13 +21,7 @@ export function Album(props: AlbumProps) {
         <CardContent>
           <List disablePadding>
             {album.tracks.map((track, index) => (
-              <AlbumTrack
-                currentTrack={currentTrack}
-                isPlaying={isPlaying}
-                key={`track-${index}`}
-                track={track}
-                onTrackClick={(track) => onTrackClick(track, album)}
-              />
+              <AlbumTrack key={`track-${index}`} track={track} album={album} />
             ))}
           </List>
         </CardContent>

@@ -1,24 +1,38 @@
 import { Download, Pause, PlayArrow } from "@mui/icons-material";
-import { ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
-import { IAlbumTrack } from "../../data/Album.interface";
+import {
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
+import { AlbumModel, IAlbumTrack } from "../../data/Album.interface";
 import React from "react";
+import { useAppState } from "../../data";
 
 export interface AlbumSongProps {
   track: IAlbumTrack;
-  currentTrack: IAlbumTrack | null;
-  isPlaying: boolean;
-  onTrackClick: (track: IAlbumTrack) => void;
+  album: AlbumModel;
 }
 export function AlbumTrack(props: AlbumSongProps) {
-  const { track, onTrackClick, isPlaying, currentTrack } = props;
+  const { track, album } = props;
+  const { isPlaying, onTrackClick, currentTrack } = useAppState();
   const isTheTrackCurrentlySelected = currentTrack?.title === track.title;
   const isTheTrackCurrentlyPlaying = isPlaying && isTheTrackCurrentlySelected;
   return (
     <ListItem>
-      <ListItemButton selected={isTheTrackCurrentlySelected} onClick={() => onTrackClick(track)}>
-        <ListItemIcon>{ isTheTrackCurrentlyPlaying ? <Pause /> : <PlayArrow />}</ListItemIcon>
+      <ListItemButton
+        selected={isTheTrackCurrentlySelected}
+        onClick={() => onTrackClick(track, album)}
+      >
+        <ListItemIcon>
+          {isTheTrackCurrentlyPlaying ? <Pause /> : <PlayArrow />}
+        </ListItemIcon>
         <ListItemText primary={track.title} />
-        <ListItemIcon><a href={track.src} download onClick={download}><Download /></a></ListItemIcon>
+        <ListItemIcon>
+          <a href={track.src} download onClick={download}>
+            <Download />
+          </a>
+        </ListItemIcon>
       </ListItemButton>
     </ListItem>
   );

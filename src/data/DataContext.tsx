@@ -3,15 +3,15 @@ import { albums } from "./index";
 import { AlbumModel, IAlbum, IAlbumTrack } from "./Album.interface";
 export interface IAppState {
   albums: AlbumModel[];
-  currentAlbum: IAlbum | null;
+  currentAlbum: AlbumModel | null;
   currentTrack: IAlbumTrack | null;
-  setCurrentAlbum: (album: IAlbum) => void;
+  setCurrentAlbum: (album: AlbumModel) => void;
   setCurrentTrack: (track: IAlbumTrack) => void;
   onTrackEnd: () => void;
   isPlaying: boolean;
   setIsPlaying: (val: boolean) => void;
-  onTrackClick: (track: IAlbumTrack, album: IAlbum) => void;
-  findAlbums: (year: string, month: string, day: string) => IAlbum[];
+  onTrackClick: (track: IAlbumTrack, album: AlbumModel) => void;
+  findAlbums: (year: string, month: string, day: string) => AlbumModel[];
 }
 const AppContext = createContext<IAppState>({} as IAppState);
 export function useAppState() {
@@ -23,7 +23,7 @@ interface AppProviderProps {
 export function AppProvider(props: AppProviderProps) {
   const { children } = props;
   const [currentTrack, setCurrentTrack] = useState<IAlbumTrack | null>(null);
-  const [currentAlbum, setCurrentAlbum] = useState<IAlbum | null>(null);
+  const [currentAlbum, setCurrentAlbum] = useState<AlbumModel | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   return (
     <AppContext.Provider
@@ -43,21 +43,22 @@ export function AppProvider(props: AppProviderProps) {
       {children}
     </AppContext.Provider>
   );
-  function findAlbums(year: string, month?: string, day?: string): IAlbum[] {
+  function findAlbums(
+    year: string,
+    month?: string,
+    day?: string
+  ): AlbumModel[] {
     return albums.filter((album) => {
-      console.log(
-        album.dateSlug,
-        `${year}/${month}/${day}`,
-        album.dateSlug === `${year}/${month}/${day}`
-      );
       return album.dateSlug === `${year}/${month}/${day}`;
     });
   }
-  function onTrackClick(track: IAlbumTrack, album: IAlbum) {
+  function onTrackClick(track: IAlbumTrack, album: AlbumModel) {
     if (track.title !== currentTrack?.title) {
       setCurrentAlbum(album);
       setCurrentTrack(track);
+      return;
     }
+    setIsPlaying(!isPlaying);
   }
   function onTrackEnd() {
     let endingTrackIndex = -1;
