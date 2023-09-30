@@ -1,7 +1,7 @@
 import { IAlbum } from "../../common/Album";
 
 const album: IAlbum = {
-  title: 'Electromagnetic Pulse',
+  title: 'Determined Derelicts',
   date: new Date(2023, 8, 3),
   img: '/img/badger.jpeg',
   tracks: [

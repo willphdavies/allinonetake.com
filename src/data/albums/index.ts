@@ -27,7 +27,11 @@ import a23 from './2023-08-13';
 import a24 from './2023-08-20';
 import a25 from './2023-09-03';
 import a26 from './2023-09-10';
+import a27 from './2023-09-17';
+import a28 from './2023-09-24';
 const data: IAlbum[] = [
+  a28,
+  a27,
   a26,
   a25,
   a24,
