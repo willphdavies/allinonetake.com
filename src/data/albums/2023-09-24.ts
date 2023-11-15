@@ -2,7 +2,7 @@ import { IAlbum } from "../../common/Album";
 
 const album: IAlbum = {
   title: 'No Excuses',
-  date: new Date(2023, 8, 3),
+  date: new Date(2023, 8, 24),
   img: '/img/jazz-vampire.jpeg',
   tracks: [
     {
