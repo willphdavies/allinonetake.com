@@ -14,7 +14,7 @@ const album: IAlbum = {
       src: '/songs/2023-11-12/a_very_happy_birthday.mp3'
     },
     {
-      title: 'Are You Ready For Another Dimension',
+      title: 'Are You Ready For Another Dimension?',
       src: '/songs/2023-11-12/are_you_ready_for_another_dimension.mp3'
     },
     {
@@ -22,11 +22,11 @@ const album: IAlbum = {
       src: '/songs/2023-11-12/a_dollar_in_my_pocket.mp3'
     },
     {
-      title: 'Ripped From A Solid Base',
+      title: 'Ripped From A Solid Bass',
       src: '/songs/2023-11-12/ripped_from_a_solid_base.mp3'
     },
     {
-      title: 'Somewhere Getting Lost In The Heat Of The Magic',
+      title: 'Somewhere, Getting Lost In The Heat Of The Magic',
       src: '/songs/2023-11-12/somewhere_getting_lost_in_the_heat_of_the_magic.mp3'
     },
     {
