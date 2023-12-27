@@ -1,6 +1,7 @@
 import { ReactNode, createContext, useContext, useState } from "react";
 import { albums } from "./index";
 import { AlbumModel, IAlbum, IAlbumTrack } from "./Album.interface";
+import ReactGA from "react-ga";
 export interface IAppState {
   albums: AlbumModel[];
   currentAlbum: AlbumModel | null;
@@ -54,6 +55,12 @@ export function AppProvider(props: AppProviderProps) {
   }
   function onTrackClick(track: IAlbumTrack, album: AlbumModel) {
     if (track.title !== currentTrack?.title) {
+      ReactGA.event({
+        category: "Track",
+        action: album.title,
+        label: track.title,
+        value: 1,
+      });
       setCurrentAlbum(album);
       setCurrentTrack(track);
       return;

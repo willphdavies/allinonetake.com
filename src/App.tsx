@@ -3,6 +3,7 @@ import "./App.scss";
 import { AppRoutes } from "./App.routes";
 import { Amplify } from "aws-amplify";
 import { withAuthenticator } from "@aws-amplify/ui-react";
+import ReactGA from "react-ga";
 import "@aws-amplify/ui-react/styles.css";
 import awsExports from "./aws-exports";
 import { Box, Chip } from "@mui/material";
@@ -14,6 +15,9 @@ interface AppProps {
   user?: any;
 }
 function App(props: AppProps) {
+  useEffect(() => {
+    ReactGA.initialize("G-6ML4HXD1MJ");
+  }, []);
   const { currentTrack, currentAlbum, setIsPlaying, isPlaying, onTrackEnd } =
     useAppState();
   const ref = useRef<ReactAudioPlayer>(null);

@@ -32,6 +32,10 @@ const album: IAlbum = {
     {
       title: "It's An End, But It's Not The End",
       src: '/songs/2023-11-12/its_an_end_but_its_not_the_end.mp3'
+    },
+    {
+      title: "Secret Track - It's 11 O' Clock",
+      src: '/songs/2023-11-12/its_11_o_clock.mp3'
     }
   ]
 }
