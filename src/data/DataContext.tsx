@@ -1,6 +1,12 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import {
+  ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { albums } from "./index";
-import { AlbumModel, IAlbum, IAlbumTrack } from "./Album.interface";
+import { AlbumModel, IAlbumTrack } from "./Album.interface";
 import ReactGA from "react-ga";
 export interface IAppState {
   albums: AlbumModel[];
@@ -13,6 +19,7 @@ export interface IAppState {
   setIsPlaying: (val: boolean) => void;
   onTrackClick: (track: IAlbumTrack, album: AlbumModel) => void;
   findAlbums: (year: string, month: string, day: string) => AlbumModel[];
+  allTracks: IAlbumTrack[];
 }
 const AppContext = createContext<IAppState>({} as IAppState);
 export function useAppState() {
@@ -26,6 +33,16 @@ export function AppProvider(props: AppProviderProps) {
   const [currentTrack, setCurrentTrack] = useState<IAlbumTrack | null>(null);
   const [currentAlbum, setCurrentAlbum] = useState<AlbumModel | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isRandom, setIsRandom] = useState(false);
+  const [allTracks, setAllTracks] = useState<IAlbumTrack[]>([]);
+  ReactGA.initialize("G-6ML4HXD1MJ");
+  useEffect(() => {
+    if (!allTracks.length) {
+      const tracks = albums.map((album) => album.tracks).flat();
+      setAllTracks(tracks);
+    }
+  }, [allTracks]);
+
   return (
     <AppContext.Provider
       value={{
@@ -39,6 +56,7 @@ export function AppProvider(props: AppProviderProps) {
         isPlaying,
         setIsPlaying,
         findAlbums,
+        allTracks,
       }}
     >
       {children}

@@ -1,7 +1,7 @@
 import { IAlbum } from "../../common/Album";
 
 const album: IAlbum = {
-  title: "Boneyard Memo",
+  title: "October Surprise",
   date: new Date(2023, 9, 15),
   img: "/img/stones.jpeg",
   tracks: [
