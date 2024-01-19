@@ -7,6 +7,7 @@ export interface IPerson {
 export interface IAlbumTrack {
   src: string;
   title: string;
+  duration?: number;
 }
 export interface IAlbum {
   date: Date;
@@ -20,15 +21,23 @@ export class AlbumModel implements IAlbum {
   title!: string;
   tracks!: IAlbumTrack[];
   get year() {
-    return this.date ? this.date.getFullYear().toString() : '';
+    return this.date ? this.date.getFullYear().toString() : "";
   }
   get month() {
-    return this.date ? Number(this.date.getMonth() + 1).toString().padStart(2,'0') : '';
+    return this.date
+      ? Number(this.date.getMonth() + 1)
+          .toString()
+          .padStart(2, "0")
+      : "";
   }
   get day() {
-    return this.date ? Number(this.date.getDate()).toString().padStart(2,'0') : '';
+    return this.date
+      ? Number(this.date.getDate()).toString().padStart(2, "0")
+      : "";
   }
-  get dateSlug() : string | undefined {
-    return this.year && this.month && this.day ? `${this.year}/${this.month}/${this.day}` : undefined;
+  get dateSlug(): string | undefined {
+    return this.year && this.month && this.day
+      ? `${this.year}/${this.month}/${this.day}`
+      : undefined;
   }
 }

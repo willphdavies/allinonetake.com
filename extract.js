@@ -14,10 +14,11 @@ const final = [];
         title: metadata.common.title,
         album: metadata.common.album,
         no: metadata.common.track.no,
+        duration: metadata.format.duration,
         src: `/songs/${lastDir}/${file}`
       });
     }
-    console.log(final.sort((a, b) => a.no - b.no).map((item) => ({ title: item.title, src: item.src })));
+    console.log(final.sort((a, b) => a.no - b.no).map((item) => ({ title: item.title, src: item.src, duration: item.duration })));
   } catch (error) {
     console.error(error.message);
   }

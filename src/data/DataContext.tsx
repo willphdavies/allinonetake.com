@@ -43,6 +43,7 @@ export function AppProvider(props: AppProviderProps) {
     }
   }, [allTracks]);
 
+  console.log(albums, allTracks);
   return (
     <AppContext.Provider
       value={{
