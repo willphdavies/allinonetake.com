@@ -40,8 +40,15 @@ import a34 from "./2023-12-10";
 import a35 from "./2023-12-31";
 import a36 from "./2024-01-07";
 import a37 from "./2024-01-15";
-
+import a38 from "./2024-01-22";
+import a39 from "./2024-01-29";
+import a40 from "./2024-02-04";
+import a41 from "./2024-02-11";
 const data: IAlbum[] = [
+  a41,
+  a40,
+  a39,
+  a38,
   a37,
   a36,
   a35,
