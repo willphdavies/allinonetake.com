@@ -3,7 +3,7 @@ import "./WordOfTheDay.scss";
 const bull = (
   <Box
     component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
   >
     •
   </Box>
@@ -13,19 +13,21 @@ export function WordOfTheDay() {
     <Card className="home-word-of-the-day">
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Word of the Day
+          Quote of the Day
         </Typography>
         <Typography className="cursive" variant="h5" component="div">
-          spon{bull}ta{bull}ne{bull}ous
-        </Typography>
-        <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          adjective
+          Miles Davis
         </Typography>
         <Typography variant="body2">
-          performed or occurring as a result of a sudden inner impulse or inclination and without premeditation or external stimulus.
+          It's not about the notes you play, it's about the notes you{" "}
+          <b>
+            <span style={{ fontSize: "18px" }} className="cursive">
+              don't
+            </span>
+          </b>{" "}
+          play...
           <br />
           <br />
-          <span className="cursive">{'"the audience broke into spontaneous applause"'}</span>
         </Typography>
       </CardContent>
     </Card>
