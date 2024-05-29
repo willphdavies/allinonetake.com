@@ -14,7 +14,7 @@ interface DefaultTemplateProps {
 
 export function DefaultTemplate(props: DefaultTemplateProps) {
   const { children } = props;
-  const { setIsRandom, playRandom, isRandom, setIsPlaying, isPlaying } = useAppState();
+  const { setIsRandom, playRandom } = useAppState();
   const [drawOpen, setDrawOpen] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => {
@@ -60,10 +60,6 @@ export function DefaultTemplate(props: DefaultTemplateProps) {
     </Box>
   );
   function clickRandom() {
-    if (isRandom) {
-      setIsPlaying(!isPlaying)
-      return setIsRandom(false);
-    }
     setIsRandom(true);
     playRandom();
   }
