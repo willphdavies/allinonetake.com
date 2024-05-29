@@ -1,17 +1,20 @@
-import { AppBar, IconButton, Toolbar, Typography, Box } from "@mui/material";
-import { ReactNode, useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import RandomIcon from "@mui/icons-material/Shuffle";
+import { AppBar, Box, IconButton, Toolbar, Typography } from "@mui/material";
+import { ReactNode, useEffect, useState } from "react";
+import ReactGA from "react-ga";
+import { Link, useLocation } from "react-router-dom";
+import { useAppState } from "../data";
 import "./CedarvilleCursive-Regular.ttf";
 import "./Default.scss";
 import { DefaultSideMenu } from "./Default.side-menu";
-import { Link, useLocation } from "react-router-dom";
-import ReactGA from "react-ga";
 interface DefaultTemplateProps {
   children: ReactNode;
 }
 
 export function DefaultTemplate(props: DefaultTemplateProps) {
   const { children } = props;
+  const { setIsRandom, playRandom, isRandom, setIsPlaying, isPlaying } = useAppState();
   const [drawOpen, setDrawOpen] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => {
@@ -44,7 +47,10 @@ export function DefaultTemplate(props: DefaultTemplateProps) {
             </Box>
           </Link>
           <Box className="-spacer"></Box>
-          <IconButton onClick={() => setDrawOpen(!drawOpen)}>
+          <IconButton onClick={() => clickRandom()}>
+            <RandomIcon className={`header__menu-icon ${isRandom ?? '-random'}`} />
+          </IconButton>
+          <IconButton onClick={() => setDrawOpen(!drawOpen)} title="Play Random">
             <MenuIcon className="header__menu-icon" />
           </IconButton>
         </Toolbar>
@@ -53,4 +59,12 @@ export function DefaultTemplate(props: DefaultTemplateProps) {
       <Box className="default-template__content">{children}</Box>
     </Box>
   );
+  function clickRandom() {
+    if (isRandom) {
+      setIsPlaying(!isPlaying)
+      return setIsRandom(false);
+    }
+    setIsRandom(true);
+    playRandom();
+  }
 }

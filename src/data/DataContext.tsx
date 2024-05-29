@@ -5,9 +5,9 @@ import {
   useEffect,
   useState,
 } from "react";
-import { albums } from "./index";
-import { AlbumModel, IAlbumTrack, ICombinedTrackList } from "./Album.interface";
 import ReactGA from "react-ga";
+import { AlbumModel, IAlbumTrack, ICombinedTrackList } from "./Album.interface";
+import { albums } from "./index";
 export interface IAppState {
   albums: AlbumModel[];
   currentAlbum: AlbumModel | null;
@@ -20,6 +20,9 @@ export interface IAppState {
   onTrackClick: (track: IAlbumTrack, album: AlbumModel) => void;
   findAlbums: (year: string, month: string, day: string) => AlbumModel[];
   allTracks: ICombinedTrackList[];
+  playRandom: () => void,
+  setIsRandom: (value: boolean) => void,
+  isRandom: boolean,
 }
 const AppContext = createContext<IAppState>({} as IAppState);
 export function useAppState() {
@@ -56,6 +59,9 @@ export function AppProvider(props: AppProviderProps) {
         setIsPlaying,
         findAlbums,
         allTracks,
+        playRandom,
+        setIsRandom,
+        isRandom
       }}
     >
       {children}
@@ -84,6 +90,14 @@ export function AppProvider(props: AppProviderProps) {
     }
     setIsPlaying(!isPlaying);
   }
+  function playRandom() {
+    const length = allTracks.length;
+    const nextTrackIndex = Math.floor(Math.random() * length);
+    return onTrackClick(
+      allTracks[nextTrackIndex],
+      allTracks[nextTrackIndex].album
+    )
+  }
   function onTrackEnd() {
     let endingTrackIndex = -1;
     if (currentAlbum) {
@@ -92,6 +106,9 @@ export function AppProvider(props: AppProviderProps) {
           endingTrackIndex = index;
         }
       });
+      if (isRandom) {
+        playRandom();
+      }
       if (endingTrackIndex > 0 && currentAlbum.tracks[endingTrackIndex + 1]) {
         return onTrackClick(
           currentAlbum.tracks[endingTrackIndex + 1],
