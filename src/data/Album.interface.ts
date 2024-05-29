@@ -41,3 +41,6 @@ export class AlbumModel implements IAlbum {
       : undefined;
   }
 }
+export interface ICombinedTrackList extends IAlbumTrack {
+  album: AlbumModel
+}
