@@ -48,7 +48,15 @@ import a42 from "./2024-03-04";
 import a43 from "./2024-03-10";
 import a44 from "./2024-03-17";
 import a45 from "./2024-03-24";
+import a46 from "./2024-03-31";
+import a47 from "./2024-04-21";
+import a47a from "./2024-04-28";
+import a48 from "./2024-05-05";
 const data: IAlbum[] = [
+  a48,
+  a47a,
+  a47,
+  a46,
   a45,
   a44,
   a43,
