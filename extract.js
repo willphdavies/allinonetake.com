@@ -7,7 +7,7 @@ const final = [];
     const lastDir = dir[dir.length - 1];
     const current = `./public/songs/${lastDir}`;
     const files = getFiles(current);
-    for(let i=0; i<files.length; i++) {
+    for (let i = 0; i < files.length; i++) {
       const file = files[i];
       const metadata = await mm.parseFile(`${current}/${file}`);
       final.push({

@@ -52,9 +52,22 @@ import a46 from "./2024-03-31";
 import a47 from "./2024-04-21";
 import a47a from "./2024-04-28";
 import a48 from "./2024-05-05";
-import a41a from "./2024-05-12";
+import a49 from "./2024-05-12";
+import a50 from "./2024-05-19";
+import a51 from "./2024-05-26";
+import a52 from "./2024-06-02";
+import a53 from "./2024-06-09";
+import a54 from "./2024-06-16";
+import a55 from "./2024-06-30";
 
 const data: IAlbum[] = [
+  a55,
+  a54,
+  a53,
+  a52,
+  a51,
+  a50,
+  a49,
   a48,
   a47a,
   a47,
@@ -63,7 +76,6 @@ const data: IAlbum[] = [
   a44,
   a43,
   a42,
-  a41a,
   a41,
   a40,
   a39,

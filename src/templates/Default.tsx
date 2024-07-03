@@ -14,7 +14,7 @@ interface DefaultTemplateProps {
 
 export function DefaultTemplate(props: DefaultTemplateProps) {
   const { children } = props;
-  const { setIsRandom, playRandom } = useAppState();
+  const { setIsRandom, playRandom, isRandom } = useAppState();
   const [drawOpen, setDrawOpen] = useState(false);
   const { pathname } = useLocation();
   useEffect(() => {
@@ -48,7 +48,7 @@ export function DefaultTemplate(props: DefaultTemplateProps) {
           </Link>
           <Box className="-spacer"></Box>
           <IconButton onClick={() => clickRandom()}>
-            <RandomIcon className={`header__menu-icon ${isRandom ?? '-random'}`} />
+            <RandomIcon className={`header__menu-icon ${isRandom ? '-random' : ''}`} />
           </IconButton>
           <IconButton onClick={() => setDrawOpen(!drawOpen)} title="Play Random">
             <MenuIcon className="header__menu-icon" />
