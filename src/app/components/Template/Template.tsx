@@ -79,7 +79,7 @@ export function Template(props: DefaultTemplateProps) {
           autoPlay
           controls
         />
-        {currentTrack && currentAlbum && currentAlbum.dateSlug && (
+        {currentTrack && currentAlbum && (
           <Chip
             className="player__now_playing"
             color="secondary"
