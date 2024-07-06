@@ -1,4 +1,4 @@
-import { IAlbum } from "../../common/Album";
+import { IAlbum } from "../Album.interface";
 
 const album: IAlbum = {
   title: "We All Scream for Ice Cream",
