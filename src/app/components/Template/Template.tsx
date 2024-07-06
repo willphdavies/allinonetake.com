@@ -71,7 +71,7 @@ export function Template(props: DefaultTemplateProps) {
       <Box className="app__player">
         <ReactAudioPlayer
           ref={ref}
-          src={currentTrack?.src}
+          src={`https://s3.us-west-2.amazonaws.com/allinonetake.com${currentTrack?.src}`}
           title={currentTrack?.title}
           onEnded={onTrackEnd}
           onPlay={() => setIsPlaying(true)}
