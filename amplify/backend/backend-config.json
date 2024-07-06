@@ -1,0 +1,122 @@
+{
+  "auth": {
+    "allinonetakecom2372ceb5": {
+      "customAuth": false,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "allinonetakecom2372ceb5CustomMessage",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL",
+          "NAME",
+          "PHONE_NUMBER"
+        ],
+        "socialProviders": [
+          "GOOGLE"
+        ],
+        "usernameAttributes": [
+          "EMAIL",
+          "PHONE_NUMBER"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "allinonetakecom2372ceb5CustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "allinonetakecomd62cd78bDefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_allinonetakecom2372ceb5CustomMessage_EMAILMESSAGE": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "allinonetakecom2372ceb5CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_allinonetakecom2372ceb5CustomMessage_EMAILSUBJECT": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "allinonetakecom2372ceb5CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_allinonetakecom2372ceb5CustomMessage_REDIRECTURL": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "allinonetakecom2372ceb5CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_allinonetakecom2372ceb5CustomMessage_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "allinonetakecom2372ceb5CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_allinonetakecom2372ceb5CustomMessage_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "allinonetakecom2372ceb5CustomMessage"
+        }
+      ]
+    },
+    "AMPLIFY_function_allinonetakecomd62cd78bDefineAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "allinonetakecomd62cd78bDefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_allinonetakecomd62cd78bDefineAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "allinonetakecomd62cd78bDefineAuthChallenge"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "allinonetake": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
+  }
+}

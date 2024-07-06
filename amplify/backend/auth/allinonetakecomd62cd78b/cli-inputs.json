@@ -1,0 +1,71 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "allinonetakecomd62cd78b_identitypool_d62cd78b",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "allinod62cd78b",
+    "userPoolName": "allinonetakecomd62cd78b_userpool_d62cd78b",
+    "autoVerifiedAttributes": [
+      "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+      "SMS Text Message"
+    ],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+      "email",
+      "name"
+    ],
+    "aliasAttributes": [],
+    "userpoolClientGenerateSecret": false,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+      "email"
+    ],
+    "userpoolClientReadAttributes": [
+      "email"
+    ],
+    "userpoolClientLambdaRole": "allinod62cd78b_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": false,
+    "sharedId": "d62cd78b",
+    "resourceName": "allinonetakecomd62cd78b",
+    "authSelections": "identityPoolAndUserPool",
+    "useDefault": "defaultSocial",
+    "hostedUI": true,
+    "usernameAttributes": [
+      "email, phone_number"
+    ],
+    "triggers": {
+      "DefineAuthChallenge": [
+        "captcha-define-challenge"
+      ],
+      "CreateAuthChallenge": [
+        "captcha-create-challenge"
+      ],
+      "VerifyAuthChallengeResponse": [
+        "captcha-verify"
+      ],
+      "CustomMessage": [
+        "verification-link"
+      ]
+    },
+    "hostedUIDomainName": "login",
+    "authProvidersUserPool": [
+      "Google"
+    ],
+    "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"name\":\"name\",\"username\":\"sub\"}}]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://allinonetake.com/\"],\"LogoutURLs\":[\"https://allinonetake.com/\"]}",
+    "userPoolGroupList": [],
+    "serviceName": "Cognito",
+    "verificationBucketName": "allinonetakecomd62cd78bverificationbucket",
+    "usernameCaseSensitive": false,
+    "useEnabledMfas": true
+  }
+}

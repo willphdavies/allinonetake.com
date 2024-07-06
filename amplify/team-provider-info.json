@@ -1,0 +1,37 @@
+{
+  "master": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-allinonetakecom-master-65602-authRole",
+      "UnauthRoleArn": "arn:aws:iam::829392936012:role/amplify-allinonetakecom-master-65602-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::829392936012:role/amplify-allinonetakecom-master-65602-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-allinonetakecom-master-65602-deployment",
+      "UnauthRoleName": "amplify-allinonetakecom-master-65602-unauthRole",
+      "StackName": "amplify-allinonetakecom-master-65602",
+      "StackId": "arn:aws:cloudformation:us-west-2:829392936012:stack/amplify-allinonetakecom-master-65602/3911b350-3bb7-11ef-85db-06a644455741",
+      "AmplifyAppId": "d34xq5nrtgrxzy",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-allinonetakecom-master-65602-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "allinonetakecom2372ceb5": {}
+      },
+      "function": {
+        "allinonetakecom2372ceb5CustomMessage": {
+          "REDIRECTURL": "https://allinonetake.com",
+          "EMAILSUBJECT": "AllInOneTake.com Email Verification",
+          "EMAILMESSAGE": "Welcome to AllInOneTake!",
+          "deploymentBucketName": "amplify-allinonetakecom-master-65602-deployment",
+          "s3Key": "amplify-builds/allinonetakecom2372ceb5CustomMessage-68304e6b776f7a304866-build.zip"
+        },
+        "allinonetakecomd62cd78bDefineAuthChallenge": {
+          "deploymentBucketName": "amplify-allinonetakecom-master-65602-deployment",
+          "s3Key": "amplify-builds/allinonetakecomd62cd78bDefineAuthChallenge-696d4762396f4e424869-build.zip"
+        }
+      },
+      "storage": {
+        "allinonetake": {}
+      }
+    }
+  }
+}

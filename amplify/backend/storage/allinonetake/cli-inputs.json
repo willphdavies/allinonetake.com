@@ -1,0 +1,14 @@
+{
+  "resourceName": "allinonetake",
+  "policyUUID": "2b4d36f6",
+  "bucketName": "allinonetakecom-nextjs",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "READ"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
