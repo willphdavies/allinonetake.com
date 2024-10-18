@@ -4,6 +4,7 @@ const album: IAlbum = {
   title: "We All Scream for Ice Cream",
   date: new Date(2024, 2, 10),
   img: "/img/sunrise.jpeg",
+  video: "/videos/sunrise.mp4",
   tracks: [
     {
       title: "River Of Instruction Booklets",

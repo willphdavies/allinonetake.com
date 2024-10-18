@@ -4,6 +4,7 @@ const album: IAlbum = {
   title: "The Cat & The Mouse",
   date: new Date(2024, 0, 15),
   img: "/img/beverly-hills.jpeg",
+  video: "/videos/beverly-hills.mp4",
   tracks: [
     {
       title: "Side Hustle",

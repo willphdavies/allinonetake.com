@@ -4,6 +4,7 @@ const album: IAlbum = {
   title: "Uncut Gems",
   date: new Date(2024, 2, 24),
   img: "/img/mixing.jpeg",
+  video: "/videos/mixing.mp4",
   tracks: [
     {
       title: "New Beginnigs",

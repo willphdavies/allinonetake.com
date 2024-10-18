@@ -1,3 +1,4 @@
+import { uniq } from "lodash";
 import {
   ReactNode,
   createContext,
@@ -20,9 +21,10 @@ export interface IAppState {
   onTrackClick: (track: IAlbumTrack, album: AlbumModel) => void;
   findAlbums: (year: string, month: string, day: string) => AlbumModel[];
   allTracks: ICombinedTrackList[];
-  playRandom: () => void,
-  setIsRandom: (value: boolean) => void,
-  isRandom: boolean,
+  playRandom: () => void;
+  setIsRandom: (value: boolean) => void;
+  isRandom: boolean;
+  videos: string[];
 }
 const AppContext = createContext<IAppState>({} as IAppState);
 export function useAppState() {
@@ -38,13 +40,24 @@ export function AppProvider(props: AppProviderProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isRandom, setIsRandom] = useState(false);
   const [allTracks, setAllTracks] = useState<ICombinedTrackList[]>([]);
+  const [videos, setVideos] = useState<string[]>([]);
   ReactGA.initialize("G-6ML4HXD1MJ");
   useEffect(() => {
     if (!allTracks.length) {
-      const tracks = albums.map((album) => album.tracks.map(track => ({ ...track, album }))).flat();
+      const tracks = albums
+        .map((album) => album.tracks.map((track) => ({ ...track, album })))
+        .flat();
       setAllTracks(tracks);
     }
   }, [allTracks]);
+  useEffect(() => {
+    if (videos.length === 0) {
+      const list: string[] = albums
+        .map((album) => album.video || "")
+        .filter(Boolean);
+      setVideos(uniq(list));
+    }
+  }, [videos]);
   return (
     <AppContext.Provider
       value={{
@@ -61,7 +74,8 @@ export function AppProvider(props: AppProviderProps) {
         allTracks,
         playRandom,
         setIsRandom,
-        isRandom
+        isRandom,
+        videos,
       }}
     >
       {children}
@@ -96,7 +110,7 @@ export function AppProvider(props: AppProviderProps) {
     return onTrackClick(
       allTracks[nextTrackIndex],
       allTracks[nextTrackIndex].album
-    )
+    );
   }
   function onTrackEnd() {
     let endingTrackIndex = -1;

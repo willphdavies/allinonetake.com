@@ -4,6 +4,7 @@ const album: IAlbum = {
   title: "Covert Cache",
   date: new Date(2024, 3, 28),
   img: "/img/robot-harvest.jpeg",
+  video: "/videos/robot-harvest.mp4",
   tracks: [
     {
       title: "Mechanized Labor Normalized",

@@ -4,6 +4,7 @@ const album: IAlbum = {
   title: "Musical Plebiscite",
   date: new Date(2024, 6, 14),
   img: "/img/flute-grass.jpeg",
+  video: "/videos/flute-grass.mp4",
   tracks: [
     {
       title: "Happiness is a Warm Gun",

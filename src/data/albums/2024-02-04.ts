@@ -4,6 +4,7 @@ const album: IAlbum = {
   title: "Fun House Mirrors",
   date: new Date(2024, 1, 4),
   img: "/img/guitar-mirror.jpeg",
+  video: "/videos/guitar-mirror.mp4",
   tracks: [
     {
       title: "Rodger That: The (Almost) One Year Anniversary Special",

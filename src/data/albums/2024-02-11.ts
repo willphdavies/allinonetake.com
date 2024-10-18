@@ -4,6 +4,7 @@ const album: IAlbum = {
   title: "Celebration Station",
   date: new Date(2024, 1, 11),
   img: "/img/flute-meadow.jpeg",
+  video: "/videos/flute-meadow.mp4",
   tracks: [
     {
       title: "Off & Running",

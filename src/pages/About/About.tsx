@@ -8,11 +8,7 @@ export function About() {
         <CardMedia component="img" src="/img/bar.jpeg" height="500" />
         <CardContent>
           All In One Take began as an open jam session at{" "}
-          <a
-            href="https://drinkbeerhereportland.com/"
-            rel="noreferrer"
-            target="_blank"
-          >
+          <a href="https://thecovertcafe.com/" rel="noreferrer" target="_blank">
             Covert Cafe
           </a>{" "}
           located on 82nd St in Portland, OR. The event quickly gained

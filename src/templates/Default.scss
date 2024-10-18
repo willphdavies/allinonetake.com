@@ -1,6 +1,7 @@
 @font-face {
   font-family: "CedarvilleCursive";
-  src: local("CedarvilleCursive"),
+  src:
+    local("CedarvilleCursive"),
     url("./CedarvilleCursive-Regular.ttf") format("truetype");
   font-weight: bold;
 }
@@ -78,6 +79,11 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+  .hidden-videos {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
 }
 
 .side-menu {
@@ -88,4 +94,9 @@
       text-decoration: none;
     }
   }
+}
+.video-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

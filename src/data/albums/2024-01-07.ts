@@ -4,6 +4,7 @@ const album: IAlbum = {
   title: "Pairing Mode",
   date: new Date(2024, 0, 7),
   img: "/img/arthur.jpeg",
+  video: "/videos/arthur.mp4",
   tracks: [
     {
       title: "Cherries & Cream",

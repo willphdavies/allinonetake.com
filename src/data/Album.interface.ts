@@ -12,6 +12,7 @@ export interface IAlbumTrack {
 export interface IAlbum {
   date: Date;
   img: string;
+  video?: string;
   title: string;
   tracks: IAlbumTrack[];
 }
@@ -19,6 +20,7 @@ export class AlbumModel implements IAlbum {
   date!: Date;
   img!: string;
   title!: string;
+  video?: string;
   tracks!: IAlbumTrack[];
   get year() {
     return this.date ? this.date.getFullYear().toString() : "";
@@ -42,5 +44,5 @@ export class AlbumModel implements IAlbum {
   }
 }
 export interface ICombinedTrackList extends IAlbumTrack {
-  album: AlbumModel
+  album: AlbumModel;
 }

@@ -3,7 +3,8 @@ import { IAlbum } from "../../common/Album";
 const album: IAlbum = {
   title: "Finely Tuned Machine",
   date: new Date(2024, 6, 28),
-  img: "/img/flute-grass.jpeg",
+  img: "/img/car.jpeg",
+  video: "/videos/car.mp4",
   tracks: [
     {
       title: "Calibration",

@@ -4,6 +4,7 @@ const album: IAlbum = {
   title: "Open Source",
   date: new Date(2024, 0, 29),
   img: "/img/barn.jpeg",
+  video: "/videos/barn.mp4",
   tracks: [
     {
       title: "Under Way",

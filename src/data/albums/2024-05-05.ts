@@ -4,6 +4,7 @@ const album: IAlbum = {
   title: "The Key To Success",
   date: new Date(2024, 4, 5),
   img: "/img/cinco.jpeg",
+  video: "/videos/cinco.mp4",
   tracks: [
     {
       title: "Gumdrops And Jellybeans",

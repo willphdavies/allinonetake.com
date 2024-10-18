@@ -4,6 +4,7 @@ const album: IAlbum = {
   title: "Peace Through Music",
   date: new Date(2024, 3, 21),
   img: "/img/basil.jpeg",
+  video: "/videos/basil.mp4",
   tracks: [
     {
       title: "Comfort Zone",
