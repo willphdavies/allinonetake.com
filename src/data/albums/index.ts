@@ -68,8 +68,10 @@ import a61 from "./2024-09-15";
 import a62 from "./2024-10-06";
 import a63 from "./2024-10-13";
 import a64 from "./2024-11-10";
+import a65 from "./2024-11-17";
 
 const data: IAlbum[] = [
+  a65,
   a64,
   a63,
   a62,
