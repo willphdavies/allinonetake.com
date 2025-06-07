@@ -48,6 +48,9 @@ export function AppProvider(props: AppProviderProps) {
         .map((album) => album.tracks.map((track) => ({ ...track, album })))
         .flat();
       setAllTracks(tracks);
+      console.log(
+        tracks.reduce((acc, track) => acc + (track.duration || 0), 0) / 60 / 60
+      );
     }
   }, [allTracks]);
   useEffect(() => {

@@ -71,8 +71,30 @@ import a64 from "./2024-11-10";
 import a65 from "./2024-11-17";
 import a66 from "./2024-12-15";
 import a67 from "./2024-12-22";
+import a68 from "./2024-12-29";
+import a69 from "./2025-01-05";
+import a70 from "./2025-01-12";
+import a71 from "./2025-01-19";
+import a72 from "./2025-01-26";
+import a73 from "./2025-02-16";
+import a74 from "./2025-03-02";
+import a75 from "./2025-03-16";
+import a76 from "./2025-03-23";
+import a77 from "./2025-03-30";
+import a78 from "./2025-04-27";
 
 const data: IAlbum[] = [
+  a78,
+  a77,
+  a76,
+  a75,
+  a74,
+  a73,
+  a72,
+  a71,
+  a70,
+  a69,
+  a68,
   a67,
   a66,
   a65,
