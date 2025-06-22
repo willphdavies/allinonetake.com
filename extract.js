@@ -1,9 +1,9 @@
-const mm = require('music-metadata');
-const fs = require('fs');
+const mm = require("music-metadata");
+const fs = require("fs");
 const final = [];
 (async () => {
   try {
-    const dir = getDirectories('./public/songs')
+    const dir = getDirectories("./public/songs");
     const lastDir = dir[dir.length - 1];
     const current = `./public/songs/${lastDir}`;
     const files = getFiles(current);
@@ -15,22 +15,35 @@ const final = [];
         album: metadata.common.album,
         no: metadata.common.track.no,
         duration: metadata.format.duration,
-        src: `/songs/${lastDir}/${file}`
+        src: `/songs/${lastDir}/${file}`,
       });
+      if (i === 0) {
+        console.log(`${metadata.common.album}`);
+      }
     }
-    console.log(final.sort((a, b) => a.no - b.no).map((item) => ({ title: item.title, src: item.src, duration: item.duration })));
+    console.log(
+      final
+        .sort((a, b) => a.no - b.no)
+        .map((item) => ({
+          title: item.title,
+          src: item.src,
+          duration: item.duration,
+        }))
+    );
   } catch (error) {
     console.error(error.message);
   }
 })();
 
 function getDirectories(source) {
-  return fs.readdirSync(source, { withFileTypes: true })
-    .filter(dirent => dirent.isDirectory())
-    .map(dirent => dirent.name)
+  return fs
+    .readdirSync(source, { withFileTypes: true })
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => dirent.name);
 }
 function getFiles(source) {
-  return fs.readdirSync(source, { withFileTypes: true })
-    .filter(dirent => !dirent.isDirectory())
-    .map(dirent => dirent.name);
+  return fs
+    .readdirSync(source, { withFileTypes: true })
+    .filter((dirent) => !dirent.isDirectory())
+    .map((dirent) => dirent.name);
 }
