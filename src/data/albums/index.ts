@@ -84,8 +84,10 @@ import a77 from "./2025-03-30";
 import a78 from "./2025-04-27";
 import a79 from "./2025-05-25";
 import a80 from "./2025-06-15";
+import a81 from "./2025-06-22";
 
 const data: IAlbum[] = [
+  a81,
   a80,
   a79,
   a78,

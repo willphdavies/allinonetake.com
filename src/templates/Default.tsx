@@ -91,7 +91,7 @@ export function DefaultTemplate(props: DefaultTemplateProps) {
       </Box>
       <Modal
         className="video-modal"
-        open={modalOpen}
+        open={false}
         onClose={() => setModalOpen(false)}
       >
         <div>
